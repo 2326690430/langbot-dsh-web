@@ -1,0 +1,14 @@
+{
+  "enabledMcpjsonServers": [
+    "shadcn",
+    "sequential-thinking",
+    "github",
+    "fetch"
+  ],
+  "disabledMcpjsonServers": [
+    "shadcn",
+    "sequential-thinking",
+    "github",
+    "fetch"
+  ]
+}

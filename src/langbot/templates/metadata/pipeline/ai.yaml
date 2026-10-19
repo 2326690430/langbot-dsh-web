@@ -1,0 +1,43 @@
+name: ai
+label:
+  en_US: AI Feature
+  zh_Hans: AI 能力
+stages:
+  - name: runner
+    label:
+      en_US: Runner
+      zh_Hans: 运行方式
+    description:
+      en_US: Strategy to call AI to process messages
+      zh_Hans: 调用 AI 处理消息的方式
+    config:
+      - name: id
+        label:
+          en_US: Runner
+          zh_Hans: 运行器
+        type: select
+        required: true
+        # Options and default are dynamically populated from RunnerRegistry
+      - name: expire-time
+        label:
+          en_US: Conversation expire time (seconds)
+          zh_Hans: 单个对话过期时间（秒）
+        description:
+          en_US: >-
+            Maximum idle time of a single conversation, measured from the last
+            message/preprocess update time. When a new message arrives and the
+            current conversation has been idle for longer than this value, the
+            existing external conversation id is discarded and a new one is
+            started automatically — the user does not need to trigger a reset
+            manually. Set to 0 to disable expiry (conversations live until the
+            user or another mechanism resets them).
+          zh_Hans: >-
+            单个对话的最长空闲时间，从最后一条消息/preprocess 更新时间开始计算。
+            当新消息到达且当前对话空闲时间已超过该值时，旧的外部对话 ID 会被自动丢弃并开启新对话，
+            用户无需手动重置。设置为 0 表示不限制过期时间（对话会一直保留，直到用户或其他机制主动重置）。
+        type: integer
+        required: true
+        default: 0
+  # Runner config stages are dynamically added from RunnerRegistry
+  # Each plugin runner's config schema is added as a separate stage
+  # The stage name matches the runner id for frontend matching

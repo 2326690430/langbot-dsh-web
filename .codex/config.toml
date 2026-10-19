@@ -1,0 +1,25 @@
+[mcp_servers.fetch]
+command = "uvx"
+args = ["mcp-server-fetch"]
+
+[mcp_servers.github]
+command = "npx"
+args = [
+    "-y",
+    "@modelcontextprotocol/server-github",
+]
+env_vars = ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+
+[mcp_servers.sequential-thinking]
+command = "npx"
+args = [
+    "-y",
+    "@modelcontextprotocol/server-sequential-thinking",
+]
+
+[mcp_servers.shadcn]
+command = "npx"
+args = [
+    "shadcn@latest",
+    "mcp",
+]
