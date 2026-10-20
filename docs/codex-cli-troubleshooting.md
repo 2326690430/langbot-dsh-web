@@ -88,8 +88,8 @@
 
 - **解决步骤**：
   1. 验证方法名称是否正确：
-     - 使用 `codex mcp list` 查看所有可用服务器
-     - 使用 `codex mcp info langbot` 查看服务器详情
+     - 使用 `codex mcp list` 查看已注册的 MCP 服务器
+     - 在 Codex 会话内查看已加载的 LangBot 工具清单及参数 schema（工具名参考 [LangBot MCP 工具参考](docs/codex-cli-setup.md)）
      - 查看LangBot MCP文档了解正确方法名称
   2. 检查参数格式是否为有效JSON
   3. 确认您的API密钥具有执行该方法所需的权限

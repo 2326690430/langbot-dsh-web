@@ -4,38 +4,41 @@
   /* 适用于 Firefox 的滚动条 */
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* 滑块颜色 + 轨道颜色 */
   scrollbar-width: thin; /* auto | thin | none */
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.21 0.006 285.885);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.705 0.015 286.067);
+  /* DeepSeek Harness palette — light. Transcribed from
+   * @deepseek-ai/dsh-client-ui-theme (neutral-bluish + deepseek blue).
+   * Borders are thin low-alpha charcoal; brand is near-black. */
+  --radius: 0.75rem;
+  --background: #f9fafb;
+  --foreground: #0f1115;
+  --card: #ffffff;
+  --card-foreground: #0f1115;
+  --popover: #ffffff;
+  --popover-foreground: #0f1115;
+  --primary: #0f1115;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f6f7;
+  --secondary-foreground: #0f1115;
+  --muted: #f5f6f7;
+  --muted-foreground: #61666b;
+  --accent: #f1f3f5;
+  --accent-foreground: #0f1115;
+  --destructive: #ec1313;
+  --border: #0f11151f;
+  --input: #0f11151f;
+  --ring: #4176e6;
+  --chart-1: #4176e6;
+  --chart-2: #22c55e;
+  --chart-3: #f59e0b;
+  --chart-4: #679efe;
+  --chart-5: #ef4444;
+  --sidebar: #f5f6f7;
+  --sidebar-foreground: #0f1115;
+  --sidebar-primary: #0f1115;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f3f5;
+  --sidebar-accent-foreground: #0f1115;
+  --sidebar-border: #0f11151f;
+  --sidebar-ring: #4176e6;
 }
 
 /* WebKit 内核浏览器定制 */
@@ -122,40 +125,46 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-twinkle: twinkle 1.5s ease-in-out infinite;
+  --font-sans: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', Consolas,
+    'Liberation Mono', Menlo, 'PingFang SC', 'Microsoft YaHei', monospace;
 }
 
+/* DeepSeek Harness palette — dark. Brand inverts to near-white; the
+ * neutral-bluish-950 base with white low-alpha borders. */
 .dark {
-  --background: oklch(0.17 0.003 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.16 0.004 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.16 0.004 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.62 0.2 255);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.27 0.005 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.27 0.005 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.27 0.005 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.552 0.016 285.938);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.05 0.002 285.885);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.62 0.2 255);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.18 0.004 286.033);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.552 0.016 285.938);
+  --background: #151517;
+  --foreground: #f9fafb;
+  --card: #1b1b1c;
+  --card-foreground: #f9fafb;
+  --popover: #1b1b1c;
+  --popover-foreground: #f9fafb;
+  --primary: #f9fafb;
+  --primary-foreground: #0f1115;
+  --secondary: #212123;
+  --secondary-foreground: #f9fafb;
+  --muted: #212123;
+  --muted-foreground: #81858c;
+  --accent: #232324;
+  --accent-foreground: #f9fafb;
+  --destructive: #f25a5a;
+  --border: #ffffff1f;
+  --input: #ffffff1f;
+  --ring: #4176e6;
+  --chart-1: #4176e6;
+  --chart-2: #22c55e;
+  --chart-3: #f59e0b;
+  --chart-4: #679efe;
+  --chart-5: #ef4444;
+  --sidebar: #0f1115;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #f9fafb;
+  --sidebar-primary-foreground: #0f1115;
+  --sidebar-accent: #232324;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: #ffffff1f;
+  --sidebar-ring: #4176e6;
 }
 
 @layer base {
@@ -168,6 +177,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
   }
 }
 

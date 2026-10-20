@@ -1,5 +1,0 @@
-Using CPython 3.14.7
-Creating virtual environment at: .venv
-error: Distribution `onnxruntime==1.23.2 @ registry+https://pypi.org/simple` can't be installed because it doesn't have a source distribution or wheel for the current platform
-
-hint: You're using CPython 3.14 (`cp314`), but `onnxruntime` (v1.23.2) only has wheels with the following Python ABI tags: `cp311`, `cp312`, `cp313`, `cp313t`

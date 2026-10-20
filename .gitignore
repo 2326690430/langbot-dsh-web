@@ -3,6 +3,7 @@
 __pycache__/
 database.db
 langbot.log
+langbot*.log
 /banlist.py
 /plugins/
 !/plugins/__init__.py
@@ -58,6 +59,11 @@ testsdk/
 # Next.js build cache (legacy)
 web/.next/
 web/.pnpm-home
+# npm lockfile is not used; pnpm is the package manager (see web/package.json packageManager)
+web/package-lock.json
+# one-off migration/dev scripts not part of the repo
+web/fix_router.sh
+web/migrate.sh
 .tmp
 Caddyfile
 
@@ -71,3 +77,7 @@ packaging/fnos/app/desktop/images/
 packaging/fnos/*.fpk
 
 r.ps1
+# stray shell-redirect / 0-byte artifacts
+=*
+web/next
+web/web@0.1.0
