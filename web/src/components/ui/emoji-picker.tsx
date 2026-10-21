@@ -200,7 +200,7 @@ export default function EmojiPicker({
         <Button
           variant="outline"
           disabled={disabled}
-          className="w-16 h-16 text-3xl p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
+          className="w-16 h-16 text-3xl p-0 hover:bg-muted"
           type="button"
           aria-label={ariaLabel}
         >
@@ -210,7 +210,7 @@ export default function EmojiPicker({
       <PopoverContent className="w-80 p-4" align="start">
         <div className="space-y-3">
           {/* 分类标题 */}
-          <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <h3 className="text-sm font-medium text-foreground">
             {CATEGORY_LABELS[activeCategory]}
           </h3>
 
@@ -221,8 +221,8 @@ export default function EmojiPicker({
                 key={`${activeCategory}-${index}`}
                 type="button"
                 onClick={() => handleEmojiSelect(emoji)}
-                className={`w-10 h-10 text-xl rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center justify-center ${
-                  value === emoji ? 'bg-gray-200 dark:bg-gray-700' : ''
+                className={`w-10 h-10 text-xl rounded hover:bg-muted transition-colors flex items-center justify-center ${
+                  value === emoji ? 'bg-muted' : ''
                 }`}
               >
                 {emoji}
@@ -231,7 +231,7 @@ export default function EmojiPicker({
           </div>
 
           {/* 分类切换按钮 */}
-          <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+          <div className="pt-2 border-t border">
             <div className="flex justify-center gap-1">
               {Object.keys(EMOJI_CATEGORIES).map((category) => (
                 <button
@@ -239,9 +239,7 @@ export default function EmojiPicker({
                   type="button"
                   onClick={() => setActiveCategory(category)}
                   className={`w-7 h-7 text-base rounded transition-colors flex items-center justify-center ${
-                    activeCategory === category
-                      ? 'bg-gray-200 dark:bg-gray-700'
-                      : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                    activeCategory === category ? 'bg-muted' : 'hover:bg-muted'
                   }`}
                   title={CATEGORY_LABELS[category]}
                 >

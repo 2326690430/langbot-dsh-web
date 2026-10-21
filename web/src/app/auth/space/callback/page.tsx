@@ -350,7 +350,7 @@ function SpaceOAuthCallbackContent() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-neutral-900">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <Card className="w-[400px] shadow-lg dark:shadow-white/10">
         <CardHeader className="text-center">
           <img
@@ -434,7 +434,7 @@ function SpaceOAuthCallbackContent() {
 
 function LoadingFallback() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-neutral-900">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <Card className="w-[400px] shadow-lg dark:shadow-white/10">
         <CardContent className="flex flex-col items-center py-12">
           <LoadingSpinner size="lg" text="" />

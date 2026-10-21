@@ -213,7 +213,7 @@ export default function FileUploadZone({
       <CardContent className="p-4">
         {showParserSelector ? (
           <div className="space-y-3">
-            <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+            <p className="text-sm font-medium text-foreground">
               {pendingFile.name}
             </p>
             {noParserAvailable ? (
@@ -230,7 +230,7 @@ export default function FileUploadZone({
               </div>
             ) : (
               <div className="space-y-2">
-                <label className="text-sm text-gray-600 dark:text-gray-400">
+                <label className="text-sm text-muted-foreground">
                   {t('knowledge.documentsTab.selectParser')}
                 </label>
                 <Select
@@ -278,7 +278,7 @@ export default function FileUploadZone({
               ${
                 isDragOver
                   ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-300 hover:border-gray-400'
+                  : 'border hover:border-muted-foreground'
               }
               ${isUploading || loadingParsers ? 'opacity-50 pointer-events-none' : ''}
             `}
@@ -297,17 +297,17 @@ export default function FileUploadZone({
 
             <label htmlFor="file-upload" className="cursor-pointer block">
               <div className="space-y-2">
-                <div className="mx-auto w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                  <CloudUpload className="w-5 h-5 text-gray-400" />
+                <div className="mx-auto w-10 h-10 bg-muted rounded-full flex items-center justify-center">
+                  <CloudUpload className="w-5 h-5 text-muted-foreground" />
                 </div>
 
                 <div>
-                  <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+                  <p className="text-base font-medium text-foreground">
                     {isUploading
                       ? t('knowledge.documentsTab.uploading')
                       : t('knowledge.documentsTab.dragAndDrop')}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1 dark:text-gray-400">
+                  <p className="text-xs text-muted-foreground mt-1">
                     {t('knowledge.documentsTab.supportedFormats')}
                   </p>
                 </div>

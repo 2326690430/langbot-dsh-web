@@ -92,7 +92,7 @@ export default function WorkspaceSelectPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4 dark:bg-neutral-900">
+    <div className="flex min-h-screen items-center justify-center bg-background p-4">
       <Card className="w-full max-w-xl shadow-lg dark:shadow-white/10">
         <CardHeader>
           <div className="mb-5 flex items-center justify-between">

@@ -1961,7 +1961,7 @@ export default function DynamicFormItemComponent({
                 {index !== 0 && (
                   <button
                     type="button"
-                    className="p-2 hover:bg-gray-100 rounded"
+                    className="p-2 hover:bg-muted rounded"
                     onClick={() => {
                       const newValue = (field.value ?? promptItems).filter(
                         (_: any, i: number) => i !== index,
@@ -1995,7 +1995,7 @@ export default function DynamicFormItemComponent({
       return (
         <div className="space-y-2">
           {field.value && (field.value as IFileConfig).file_key ? (
-            <Card className="py-3 max-w-full overflow-hidden bg-gray-900">
+            <Card className="py-3 max-w-full overflow-hidden bg-background">
               <CardContent className="flex items-center gap-3 p-0 px-4 min-w-0">
                 <div className="flex-1 min-w-0 overflow-hidden">
                   <div
@@ -2069,7 +2069,7 @@ export default function DynamicFormItemComponent({
             (fileConfig: IFileConfig, index: number) => (
               <Card
                 key={index}
-                className="py-3 max-w-full overflow-hidden bg-gray-900"
+                className="py-3 max-w-full overflow-hidden bg-background"
               >
                 <CardContent className="flex items-center gap-3 p-0 px-4 min-w-0">
                   <div className="flex-1 min-w-0 overflow-hidden">

@@ -24,9 +24,9 @@ function levelClassName(level: string): string {
     case 'WARNING':
       return 'text-amber-500';
     case 'DEBUG':
-      return 'text-gray-400 dark:text-gray-500';
+      return 'text-muted-foreground';
     default:
-      return 'text-gray-700 dark:text-gray-300';
+      return 'text-foreground';
   }
 }
 
@@ -125,10 +125,10 @@ export default function MCPLogs({ serverName }: { serverName: string }) {
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="min-h-0 flex-1 overflow-auto bg-gray-50 px-3 py-3 font-mono text-xs leading-relaxed dark:bg-gray-900/40 sm:px-6"
+        className="min-h-0 flex-1 overflow-auto bg-muted px-3 py-3 font-mono text-xs leading-relaxed sm:px-6"
       >
         {logs.length === 0 ? (
-          <div className="py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+          <div className="py-8 text-center text-sm text-muted-foreground">
             {t('mcp.logsEmpty')}
           </div>
         ) : (

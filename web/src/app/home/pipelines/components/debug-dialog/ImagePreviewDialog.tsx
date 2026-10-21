@@ -27,7 +27,7 @@ export default function ImagePreviewDialog({
         {/* 关闭按钮 - 在图片上方 */}
         <button
           onClick={onClose}
-          className="self-end w-9 h-9 rounded-full bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100 shadow-lg transition-all hover:scale-105 flex items-center justify-center"
+          className="self-end w-9 h-9 rounded-full bg-card hover:bg-muted text-foreground shadow-lg transition-all hover:scale-105 flex items-center justify-center"
         >
           <X className="w-4 h-4" />
         </button>

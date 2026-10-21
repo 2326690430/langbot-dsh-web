@@ -158,7 +158,7 @@ export default function ExtensionCardComponent({
         {cardVO.mode && (
           <Badge
             variant="outline"
-            className="text-[0.7rem] border-gray-400 text-gray-600 dark:text-gray-300 flex-shrink-0"
+            className="text-[0.7rem] border text-muted-foreground flex-shrink-0"
           >
             {cardVO.mode.toUpperCase()}
           </Badge>
@@ -174,7 +174,7 @@ export default function ExtensionCardComponent({
             connected: 'border-green-400 text-green-600 dark:text-green-400',
             connecting: 'border-amber-400 text-amber-600 dark:text-amber-400',
             error: 'border-red-400 text-red-600 dark:text-red-400',
-            disabled: 'border-gray-400 text-gray-600 dark:text-gray-300',
+            disabled: 'border text-muted-foreground',
           };
           const badgeLabel: Record<string, string> = {
             connected: t('mcp.statusConnected'),

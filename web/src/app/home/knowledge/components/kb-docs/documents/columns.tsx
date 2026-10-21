@@ -53,7 +53,10 @@ export const columns = (
             );
           default:
             return (
-              <Badge variant="outline" className="bg-gray-500 text-white">
+              <Badge
+                variant="outline"
+                className="bg-muted-foreground text-background"
+              >
                 {document.status}
               </Badge>
             );

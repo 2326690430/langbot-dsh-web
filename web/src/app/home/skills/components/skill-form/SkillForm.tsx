@@ -398,7 +398,7 @@ const FileTree = forwardRef<FileTreeHandle, FileTreeProps>(function FileTree(
               )}
             </>
           ) : (
-            <FileIcon className="h-4 w-4 text-gray-500" />
+            <FileIcon className="h-4 w-4 text-muted-foreground" />
           )}
           <span className="text-sm truncate">{entry.name}</span>
           {!entry.is_dir && entry.size !== null && (
@@ -527,7 +527,7 @@ function LocalFileTree({
               )}
             </>
           ) : (
-            <FileIcon className="h-4 w-4 text-gray-500" />
+            <FileIcon className="h-4 w-4 text-muted-foreground" />
           )}
           <span className="truncate text-sm">{entry.name}</span>
           {!entry.is_dir && entry.size !== null && (

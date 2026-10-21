@@ -161,7 +161,7 @@ export default function PluginReadme({
           </ReactMarkdown>
         </div>
       ) : (
-        <div className="p-6 text-sm text-gray-500 dark:text-gray-400">
+        <div className="p-6 text-sm text-muted-foreground">
           {t('plugins.noReadme')}
         </div>
       )}
