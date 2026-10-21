@@ -1,0 +1,17 @@
+# Backend — Vercel only hosts the static frontend
+#
+src/
+data/
+plugins/
+packaging/
+tests/
+scripts/
+docs/
+skills/
+.venv/
+langbot*.log
+__pycache__/
+*.py
+pyproject.toml
+uv.lock
+main.py
