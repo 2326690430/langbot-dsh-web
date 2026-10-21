@@ -1,0 +1,78 @@
+version: 2.1
+
+orbs:
+  browser-tools: circleci/browser-tools@1.4.2
+
+executors:
+  web:
+    docker:
+      - image: cimg/node:22.4
+    working_directory: /app/web
+
+commands:
+  install-pnpm:
+    steps:
+      - run:
+          name: Install pnpm
+          command: npm install -g pnpm@8.9.2
+
+jobs:
+  web-build:
+    executor: web
+    steps:
+      - checkout
+      - install-pnpm
+      - restore_cache:
+          keys:
+            - web-deps-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install dependencies
+          command: pnpm install --frozen-lockfile
+      - save_cache:
+          key: web-deps-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - /app/web/node_modules
+      - run:
+          name: Lint
+          command: pnpm lint
+      - run:
+          name: Unit tests
+          command: pnpm test:unit
+      - run:
+          name: Build
+          command: pnpm build
+      - persist_to_cache:
+          key: web-dist-{{ .Revision }}
+          paths:
+            - /app/web/dist
+      - store_artifacts:
+          path: /app/web/dist
+
+  web-deploy:
+    executor: web
+    steps:
+      - checkout
+      - install-pnpm
+      - run:
+          name: Deploy static frontend
+          # Replace with your hosting provider's deploy step.
+          # For example, an S3+CloudFront or Netlify/Vercel CLI deploy.
+          command: |
+            echo "Deploy /app/web/dist to your host."
+            # e.g. npx vercel --prod --token $VERCEL_TOKEN
+
+workflows:
+  web:
+    jobs:
+      - web-build:
+          filters:
+            paths:
+              - web/**
+              - .circleci/**
+      - web-deploy:
+          requires:
+            - web-build
+          context: web-deploy
+          filters:
+            branches:
+              only: main
