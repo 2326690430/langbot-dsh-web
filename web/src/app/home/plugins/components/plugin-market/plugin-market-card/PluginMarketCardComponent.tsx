@@ -196,7 +196,7 @@ export default function PluginMarketCardComponent({
           ? t('market.installedCard', { name: cardVO.label })
           : t('market.installCard', { name: cardVO.label })
       }
-      className={`w-[100%] h-[10rem] bg-white rounded-[10px] border border-border shadow-[0px_1px_2px_0_rgba(0,0,0,0.06)] p-3 sm:p-[1rem] transition-shadow duration-200 outline-none dark:bg-[#1f1f22] dark:shadow-[0px_1px_2px_0_rgba(255,255,255,0.04)] relative ${
+      className={`w-[100%] h-[10rem] bg-card rounded-[10px] border shadow-[0px_1px_2px_0_rgba(0,0,0,0.06)] p-3 sm:p-[1rem] transition-shadow duration-200 outline-none dark:shadow-[0px_1px_2px_0_rgba(255,255,255,0.04)] relative ${
         installDisabled
           ? 'cursor-not-allowed opacity-60'
           : 'cursor-pointer hover:shadow-[0px_2px_5px_0_rgba(0,0,0,0.08)] focus-visible:ring-[3px] focus-visible:ring-ring/50 dark:hover:shadow-[0px_2px_5px_0_rgba(255,255,255,0.07)]'

@@ -40,7 +40,7 @@ type StatusState = 'ok' | 'disabled' | 'failed' | null;
 
 // Neutral tile: the status dots already carry the health colour, so the card's
 // own tile must not encode a second, conflicting verdict.
-const SYSTEM_STATUS_ACCENT = '#64748b';
+const SYSTEM_STATUS_ACCENT = 'var(--muted-foreground)';
 
 function StatusDot({ state }: { state: StatusState }) {
   if (state === null)

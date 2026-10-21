@@ -144,13 +144,13 @@ export default function ResetPassword() {
   );
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-neutral-900">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <Card className="w-[375px] shadow-lg dark:shadow-white/10">
         <CardHeader>
           <div className="flex justify-between items-center mb-6">
             <Link
               to="/login"
-              className="flex items-center text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors"
+              className="flex items-center text-sm text-muted-foreground hover:text-foreground dark:text-muted-foreground dark:hover:text-foreground transition-colors"
             >
               <ArrowLeft className="h-4 w-4 mr-1" />
               {t('resetPassword.backToLogin')}
@@ -175,7 +175,7 @@ export default function ResetPassword() {
                     <FormLabel>{t('common.email')}</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                        <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                         <Input
                           placeholder={t('common.enterEmail')}
                           className="pl-10"
@@ -223,7 +223,7 @@ export default function ResetPassword() {
                       <FormControl>
                         {/* Recovery keys are case-sensitive base64url strings; send them verbatim */}
                         <div className="relative">
-                          <KeyRound className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <KeyRound className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             placeholder={t('resetPassword.enterRecoveryKey')}
                             className="pl-10 font-mono"
@@ -256,9 +256,9 @@ export default function ResetPassword() {
                       <FormControl>
                         <div className="relative">
                           {method === 'totp' ? (
-                            <ShieldCheck className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                            <ShieldCheck className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           ) : (
-                            <LifeBuoy className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                            <LifeBuoy className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           )}
                           <Input
                             inputMode={method === 'totp' ? 'numeric' : 'text'}
@@ -292,7 +292,7 @@ export default function ResetPassword() {
                     <FormLabel>{t('resetPassword.newPassword')}</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                        <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                         <Input
                           type="password"
                           placeholder={t('resetPassword.enterNewPassword')}

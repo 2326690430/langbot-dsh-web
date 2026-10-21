@@ -113,7 +113,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-neutral-900">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <Card className="w-[375px] shadow-lg dark:shadow-white/10">
         <CardHeader>
           <div className="flex justify-between items-center mb-6">
@@ -174,7 +174,7 @@ export default function Register() {
                   <span className="w-full border-t" />
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white dark:bg-card px-2 text-muted-foreground">
+                  <span className="bg-card px-2 text-muted-foreground">
                     {t('common.or')}
                   </span>
                 </div>
@@ -194,7 +194,7 @@ export default function Register() {
                         <FormLabel>{t('common.email')}</FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                            <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                             <Input
                               placeholder={t('common.enterEmail')}
                               className="pl-10"
@@ -215,7 +215,7 @@ export default function Register() {
                         <FormLabel>{t('common.password')}</FormLabel>
                         <FormControl>
                           <div className="relative">
-                            <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                            <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                             <Input
                               type="password"
                               placeholder={t('common.enterPassword')}

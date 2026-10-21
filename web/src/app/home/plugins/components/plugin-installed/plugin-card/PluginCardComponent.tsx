@@ -39,7 +39,7 @@ export default function PluginCardComponent({
   return (
     <>
       <div
-        className="w-[100%] h-[10rem] bg-white rounded-[10px] border border-[#e4e4e7] dark:border-[#27272a] p-[1.2rem] cursor-pointer dark:bg-[#1f1f22] relative transition-all duration-200 hover:border-[#a1a1aa] dark:hover:border-[#3f3f46]"
+        className="w-[100%] h-[10rem] bg-card rounded-[10px] border p-[1.2rem] cursor-pointer relative transition-all duration-200 hover:border-muted-foreground"
         onClick={() => onCardClick()}
       >
         <div className="w-full h-full flex flex-row items-start justify-start gap-[1.2rem]">
@@ -178,12 +178,12 @@ export default function PluginCardComponent({
                   <div className="relative">
                     <Button
                       variant="ghost"
-                      className="bg-white dark:bg-[#1f1f22] hover:bg-gray-100 dark:hover:bg-[#2a2a2d]"
+                      className="bg-card hover:bg-muted"
                     >
                       <Ellipsis className="w-4 h-4" />
                     </Button>
                     {cardVO.hasUpdate && (
-                      <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white dark:border-[#1f1f22]"></div>
+                      <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-destructive rounded-full border-2 border-card"></div>
                     )}
                   </div>
                 </DropdownMenuTrigger>

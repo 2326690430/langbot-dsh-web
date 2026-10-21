@@ -46,7 +46,7 @@ export default function ExecutionOverviewCards({
       <MetricCard
         label={t('monitoring.execution.cards.totalExecutions')}
         icon={<Activity className="h-4 w-4" />}
-        accent="#8b5cf6"
+        accent="var(--chart-4)"
         loading={loading}
         value={(overview?.total ?? 0).toLocaleString()}
         hint={t('monitoring.execution.cards.bySource', {
@@ -67,7 +67,7 @@ export default function ExecutionOverviewCards({
         label={t('monitoring.execution.cards.successRate')}
         description={t('monitoring.execution.cards.successRateHint')}
         icon={<CheckCircle2 className="h-4 w-4" />}
-        accent="#3b82f6"
+        accent="var(--chart-1)"
         loading={loading}
         value={
           overview?.success_rate != null ? `${overview.success_rate}%` : '—'
@@ -81,7 +81,7 @@ export default function ExecutionOverviewCards({
       <MetricCard
         label={t('monitoring.execution.cards.running')}
         icon={<Activity className="h-4 w-4" />}
-        accent="#06b6d4"
+        accent="var(--chart-2)"
         loading={loading}
       >
         <div className="grid grid-cols-3 gap-3">
@@ -103,7 +103,7 @@ export default function ExecutionOverviewCards({
       <MetricCard
         label={t('monitoring.execution.cards.failed')}
         icon={<TriangleAlert className="h-4 w-4" />}
-        accent="#ef4444"
+        accent="var(--chart-5)"
         loading={loading}
         value={
           <span className="flex items-center gap-3">
@@ -120,7 +120,7 @@ export default function ExecutionOverviewCards({
         label={t('monitoring.execution.cards.latency')}
         description={t('monitoring.execution.cards.latencyHint')}
         icon={<Timer className="h-4 w-4" />}
-        accent="#f59e0b"
+        accent="var(--chart-3)"
         loading={loading}
       >
         <div className="grid grid-cols-2 gap-3">
@@ -154,7 +154,7 @@ export default function ExecutionOverviewCards({
         label={t('monitoring.execution.cards.tokens')}
         description={t('monitoring.execution.cards.tokensHint')}
         icon={<Zap className="h-4 w-4" />}
-        accent="#10b981"
+        accent="var(--chart-2)"
         loading={loading}
         value={(tokens?.total_tokens ?? 0).toLocaleString()}
         hint={t('monitoring.execution.cards.coverage', {
@@ -166,7 +166,7 @@ export default function ExecutionOverviewCards({
       <MetricCard
         label={t('monitoring.activeSessions')}
         icon={<Users className="h-4 w-4" />}
-        accent="#6366f1"
+        accent="var(--chart-1)"
         loading={loading}
         value={(activeSessions ?? 0).toLocaleString()}
       />

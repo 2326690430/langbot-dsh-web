@@ -356,7 +356,7 @@ export default function KnowledgeEngineSelect({
       >
         <SelectTrigger
           aria-label={t('knowledge.knowledgeEngine')}
-          className="w-full bg-[#ffffff] text-left dark:bg-[#2a2a2e]"
+          className="w-full bg-card text-left"
         >
           {selectedEngine ? (
             <SelectedEngineContent engine={selectedEngine} />

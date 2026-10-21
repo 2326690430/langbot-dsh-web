@@ -84,7 +84,7 @@ export default function PipelineMonitoringTab({
     <div className="w-full h-full flex flex-col">
       {/* Header with refresh button */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b pb-4">
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-muted-foreground">
           {t('pipelines.monitoring.description')}
         </p>
         <div className="flex items-center gap-2">
@@ -93,7 +93,7 @@ export default function PipelineMonitoringTab({
               variant="outline"
               size="sm"
               onClick={onNavigateToMonitoring}
-              className="bg-white dark:bg-[#2a2a2e] hover:bg-gray-50 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-600"
+              className="bg-card hover:bg-muted border text-muted-foreground"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
               {t('pipelines.monitoring.detailedLogs')}
@@ -103,7 +103,7 @@ export default function PipelineMonitoringTab({
             variant="outline"
             size="sm"
             onClick={refetch}
-            className="bg-white dark:bg-[#2a2a2e] hover:bg-gray-50 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-600"
+            className="bg-card hover:bg-muted border text-muted-foreground"
           >
             <RefreshCw className="w-4 h-4 mr-2" />
             {t('monitoring.refreshData')}
@@ -115,23 +115,23 @@ export default function PipelineMonitoringTab({
       {data && (
         <div className="mb-4 grid grid-cols-3 divide-x rounded-xl border bg-card">
           <div className="p-3">
-            <div className="text-sm text-gray-500 dark:text-gray-400">
+            <div className="text-sm text-muted-foreground">
               {t('monitoring.totalMessages')}
             </div>
-            <div className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-1">
+            <div className="text-2xl font-bold text-foreground mt-1">
               {data.overview.totalMessages}
             </div>
           </div>
           <div className="p-3">
-            <div className="text-sm text-gray-500 dark:text-gray-400">
+            <div className="text-sm text-muted-foreground">
               {t('monitoring.successRate')}
             </div>
-            <div className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-1">
+            <div className="text-2xl font-bold text-foreground mt-1">
               {data.overview.successRate.toFixed(1)}%
             </div>
           </div>
           <div className="p-3">
-            <div className="text-sm text-gray-500 dark:text-gray-400">
+            <div className="text-sm text-muted-foreground">
               {t('monitoring.tabs.errors')}
             </div>
             <div className="text-2xl font-bold text-red-600 dark:text-red-400 mt-1">
@@ -147,22 +147,22 @@ export default function PipelineMonitoringTab({
         onValueChange={setActiveTab}
         className="flex-1 flex flex-col min-h-0"
       >
-        <TabsList className="bg-gray-100 dark:bg-[#1a1a1e] h-10 p-1 mb-4">
+        <TabsList className="bg-muted h-10 p-1 mb-4">
           <TabsTrigger
             value="messages"
-            className="px-4 py-1.5 text-sm font-medium cursor-pointer data-[state=active]:bg-white dark:data-[state=active]:bg-[#2a2a2e] data-[state=active]:shadow-sm"
+            className="px-4 py-1.5 text-sm font-medium cursor-pointer data-[state=active]:bg-card data-[state=active]:shadow-sm"
           >
             {t('monitoring.tabs.messages')}
           </TabsTrigger>
           <TabsTrigger
             value="errors"
-            className="px-4 py-1.5 text-sm font-medium cursor-pointer data-[state=active]:bg-white dark:data-[state=active]:bg-[#2a2a2e] data-[state=active]:shadow-sm"
+            className="px-4 py-1.5 text-sm font-medium cursor-pointer data-[state=active]:bg-card data-[state=active]:shadow-sm"
           >
             {t('monitoring.tabs.errors')}
           </TabsTrigger>
           <TabsTrigger
             value="llmCalls"
-            className="px-4 py-1.5 text-sm font-medium cursor-pointer data-[state=active]:bg-white dark:data-[state=active]:bg-[#2a2a2e] data-[state=active]:shadow-sm"
+            className="px-4 py-1.5 text-sm font-medium cursor-pointer data-[state=active]:bg-card data-[state=active]:shadow-sm"
           >
             {t('monitoring.tabs.modelCalls')}
           </TabsTrigger>
@@ -186,8 +186,8 @@ export default function PipelineMonitoringTab({
             )}
 
             {!loading && (!data || conversationTurns.length === 0) && (
-              <div className="text-center text-gray-500 dark:text-gray-400 py-16">
-                <MessageCircle className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" />
+              <div className="text-center text-muted-foreground py-16">
+                <MessageCircle className="w-16 h-16 mx-auto mb-4 text-muted-foreground/50" />
                 <p className="text-base font-medium">
                   {t('monitoring.messageList.noMessages')}
                 </p>
@@ -248,14 +248,14 @@ export default function PipelineMonitoringTab({
                             </p>
                           </div>
                         </div>
-                        <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap ml-4">
+                        <span className="text-xs text-muted-foreground whitespace-nowrap ml-4">
                           {error.timestamp.toLocaleString()}
                         </span>
                       </div>
                     </div>
 
                     {expandedErrorId === error.id && (
-                      <div className="border-t border-red-200 dark:border-red-900 p-4 bg-white dark:bg-gray-900">
+                      <div className="border-t border-destructive/30 p-4 bg-card">
                         <div className="space-y-3">
                           <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-3">
                             <h4 className="text-sm font-semibold text-red-700 dark:text-red-400 mb-2">
@@ -267,11 +267,11 @@ export default function PipelineMonitoringTab({
                           </div>
 
                           {error.stackTrace && (
-                            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
-                              <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <div className="bg-muted rounded-lg p-3">
+                              <h4 className="text-sm font-semibold text-foreground mb-2">
                                 {t('monitoring.errors.stackTrace')}
                               </h4>
-                              <pre className="text-xs text-gray-600 dark:text-gray-400 overflow-auto max-h-60 bg-white dark:bg-gray-900 p-2 rounded whitespace-pre-wrap break-words">
+                              <pre className="text-xs text-muted-foreground overflow-auto max-h-60 bg-card p-2 rounded whitespace-pre-wrap break-words font-mono">
                                 {error.stackTrace}
                               </pre>
                             </div>
@@ -286,7 +286,7 @@ export default function PipelineMonitoringTab({
 
             {!loading &&
               (!data || !data.errors || data.errors.length === 0) && (
-                <div className="text-center text-gray-500 dark:text-gray-400 py-16">
+                <div className="text-center text-muted-foreground py-16">
                   <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-green-300 dark:text-green-600" />
                   <p className="text-base font-medium text-green-600 dark:text-green-400">
                     {t('monitoring.errors.noErrors')}
@@ -308,7 +308,7 @@ export default function PipelineMonitoringTab({
                 {data.llmCalls.map((call) => (
                   <div
                     key={call.id}
-                    className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-all duration-200"
+                    className="border rounded-lg p-4 hover:shadow-md transition-all duration-200"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -323,10 +323,10 @@ export default function PipelineMonitoringTab({
                             {call.status}
                           </span>
                         </div>
-                        <div className="font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">
+                        <div className="font-medium text-sm text-foreground mb-2">
                           {call.modelName}
                         </div>
-                        <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+                        <div className="text-xs text-muted-foreground space-y-1">
                           <div className="flex flex-wrap gap-4">
                             <span>
                               {t('monitoring.llmCalls.inputTokens')}:{' '}
@@ -358,7 +358,7 @@ export default function PipelineMonitoringTab({
                           </div>
                         )}
                       </div>
-                      <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap ml-4">
+                      <span className="text-xs text-muted-foreground whitespace-nowrap ml-4">
                         {call.timestamp.toLocaleString()}
                       </span>
                     </div>
@@ -369,8 +369,8 @@ export default function PipelineMonitoringTab({
 
             {!loading &&
               (!data || !data.llmCalls || data.llmCalls.length === 0) && (
-                <div className="text-center text-gray-500 dark:text-gray-400 py-16">
-                  <Monitor className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" />
+                <div className="text-center text-muted-foreground py-16">
+                  <Monitor className="w-16 h-16 mx-auto mb-4 text-muted-foreground/50" />
                   <p className="text-base font-medium">
                     {t('monitoring.llmCalls.noData')}
                   </p>

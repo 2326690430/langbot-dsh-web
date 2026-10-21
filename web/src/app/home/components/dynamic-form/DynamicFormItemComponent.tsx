@@ -1921,7 +1921,7 @@ export default function DynamicFormItemComponent({
               >
                 {/* 角色选择 */}
                 {index === 0 ? (
-                  <div className="w-full shrink-0 rounded border bg-gray-50 px-3 py-2 text-gray-500 sm:w-[120px] dark:border-gray-600 dark:bg-[#2a292e] dark:text-white">
+                  <div className="w-full shrink-0 rounded border bg-muted px-3 py-2 text-muted-foreground sm:w-[120px]">
                     system
                   </div>
                 ) : (

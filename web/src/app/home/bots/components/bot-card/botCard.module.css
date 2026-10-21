@@ -1,25 +1,25 @@
 .cardContainer {
   width: 100%;
   height: 10rem;
-  background-color: #fff;
+  background-color: var(--card);
   border-radius: 10px;
-  border: 1px solid #e4e4e7;
+  border: 1px solid var(--border);
   padding: 1.2rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 :global(.dark) .cardContainer {
-  background-color: #1f1f22;
-  border-color: #27272a;
+  background-color: var(--card);
+  border-color: var(--border);
 }
 
 .cardContainer:hover {
-  border-color: #a1a1aa;
+  border-color: var(--muted-foreground);
 }
 
 :global(.dark) .cardContainer:hover {
-  border-color: #3f3f46;
+  border-color: var(--muted-foreground);
 }
 
 .iconBasicInfoContainer {
@@ -57,24 +57,24 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #1a1a1a;
+  color: var(--foreground);
 }
 
 :global(.dark) .basicInfoName {
-  color: #f0f0f0;
+  color: var(--foreground);
 }
 
 .basicInfoDescription {
   font-size: 1rem;
   font-weight: 300;
-  color: #b1b1b1;
+  color: var(--muted-foreground);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 :global(.dark) .basicInfoDescription {
-  color: #888888;
+  color: var(--muted-foreground);
 }
 
 .basicInfoAdapterContainer {
@@ -87,21 +87,21 @@
   width: 1.2rem;
   height: 1.2rem;
   margin-top: 0.2rem;
-  color: #626262;
+  color: var(--muted-foreground);
 }
 
 :global(.dark) .basicInfoAdapterIcon {
-  color: #a0a0a0;
+  color: var(--muted-foreground);
 }
 
 .basicInfoAdapterLabel {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #626262;
+  color: var(--muted-foreground);
 }
 
 :global(.dark) .basicInfoAdapterLabel {
-  color: #a0a0a0;
+  color: var(--muted-foreground);
 }
 
 .basicInfoPipelineContainer {
@@ -113,22 +113,22 @@
 .basicInfoPipelineIcon {
   width: 1.2rem;
   height: 1.2rem;
-  color: #626262;
+  color: var(--muted-foreground);
   margin-top: 0.2rem;
 }
 
 :global(.dark) .basicInfoPipelineIcon {
-  color: #a0a0a0;
+  color: var(--muted-foreground);
 }
 
 .basicInfoPipelineLabel {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #626262;
+  color: var(--muted-foreground);
 }
 
 :global(.dark) .basicInfoPipelineLabel {
-  color: #a0a0a0;
+  color: var(--muted-foreground);
 }
 
 .bigText {

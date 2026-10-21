@@ -77,7 +77,7 @@ export const columns = (
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
-              className="bg-white dark:bg-[#2a2a2e]"
+              className="bg-card"
             >
               <DropdownMenuLabel>
                 {t('knowledge.documentsTab.actions')}

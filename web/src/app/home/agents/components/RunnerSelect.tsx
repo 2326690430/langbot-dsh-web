@@ -398,7 +398,7 @@ export default function RunnerSelect({
       >
         <SelectTrigger
           aria-label={label}
-          className="w-full bg-[#ffffff] dark:bg-[#2a2a2e]"
+          className="w-full bg-card"
         >
           {selectedOption ? (
             <InstalledRunnerContent

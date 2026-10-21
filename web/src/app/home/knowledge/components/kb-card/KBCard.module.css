@@ -1,9 +1,9 @@
 .cardContainer {
   width: 100%;
   height: 10rem;
-  background-color: #fff;
+  background-color: var(--card);
   border-radius: 10px;
-  border: 1px solid #e4e4e7;
+  border: 1px solid var(--border);
   padding: 1rem;
   cursor: pointer;
   display: flex;
@@ -14,16 +14,16 @@
 }
 
 :global(.dark) .cardContainer {
-  background-color: #1f1f22;
-  border-color: #27272a;
+  background-color: var(--card);
+  border-color: var(--border);
 }
 
 .cardContainer:hover {
-  border-color: #a1a1aa;
+  border-color: var(--muted-foreground);
 }
 
 :global(.dark) .cardContainer:hover {
-  border-color: #3f3f46;
+  border-color: var(--muted-foreground);
 }
 
 .basicInfoContainer {
@@ -40,7 +40,7 @@
   width: 3rem;
   height: 3rem;
   border-radius: 0.5rem;
-  background-color: #f5f5f5;
+  background-color: var(--muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +49,7 @@
 }
 
 :global(.dark) .iconEmoji {
-  background-color: #2a2a2d;
+  background-color: var(--muted);
 }
 
 .iconBasicInfoContainer {
@@ -72,11 +72,11 @@
 .basicInfoNameText {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--foreground);
 }
 
 :global(.dark) .basicInfoNameText {
-  color: #f0f0f0;
+  color: var(--foreground);
 }
 
 .basicInfoDescriptionText {
@@ -87,11 +87,11 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #b1b1b1;
+  color: var(--muted-foreground);
 }
 
 :global(.dark) .basicInfoDescriptionText {
-  color: #888888;
+  color: var(--muted-foreground);
 }
 
 .basicInfoLastUpdatedTimeContainer {
@@ -104,21 +104,21 @@
 .basicInfoUpdateTimeIcon {
   width: 1.2rem;
   height: 1.2rem;
-  color: #626262;
+  color: var(--muted-foreground);
 }
 
 :global(.dark) .basicInfoUpdateTimeIcon {
-  color: #a0a0a0;
+  color: var(--muted-foreground);
 }
 
 .basicInfoUpdateTimeText {
   font-size: 1rem;
   font-weight: 400;
-  color: #626262;
+  color: var(--muted-foreground);
 }
 
 :global(.dark) .basicInfoUpdateTimeText {
-  color: #a0a0a0;
+  color: var(--muted-foreground);
 }
 
 .operationContainer {
@@ -139,21 +139,21 @@
 .operationDefaultBadgeIcon {
   width: 1.2rem;
   height: 1.2rem;
-  color: #ffcd27;
+  color: var(--chart-3);
 }
 
 :global(.dark) .operationDefaultBadgeIcon {
-  color: #fbbf24;
+  color: var(--chart-3);
 }
 
 .operationDefaultBadgeText {
   font-size: 1rem;
   font-weight: 400;
-  color: #ffcd27;
+  color: var(--chart-3);
 }
 
 :global(.dark) .operationDefaultBadgeText {
-  color: #fbbf24;
+  color: var(--chart-3);
 }
 
 .bigText {
@@ -175,12 +175,12 @@
   line-height: 1rem;
   padding: 0.125rem 0.5rem;
   border-radius: 9999px;
-  background-color: #f3e8ff;
-  color: #7e22ce;
+  background-color: color-mix(in srgb, var(--chart-4) 12%, var(--card));
+  color: var(--chart-4);
   white-space: nowrap;
 }
 
 :global(.dark) .engineBadge {
-  background-color: #581c87;
-  color: #d8b4fe;
+  background-color: color-mix(in srgb, var(--chart-4) 30%, var(--card));
+  color: var(--chart-4);
 }

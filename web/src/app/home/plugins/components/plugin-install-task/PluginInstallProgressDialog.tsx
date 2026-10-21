@@ -397,7 +397,7 @@ export default function PluginInstallProgressDialog() {
   return (
     <Dialog open={open} onOpenChange={(o) => !o && handleClose()}>
       <DialogContent
-        className="sm:max-w-lg w-[90vw] max-h-[80vh] p-4 sm:p-6 bg-white dark:bg-[#1a1a1e] overflow-y-auto overflow-x-hidden"
+        className="sm:max-w-lg w-[90vw] max-h-[80vh] p-4 sm:p-6 bg-card overflow-y-auto overflow-x-hidden"
         hideCloseButton
       >
         <DialogHeader>
