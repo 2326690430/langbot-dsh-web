@@ -218,39 +218,39 @@ export default function TokenMonitoring({
           hint={t('monitoring.tokens.acrossCalls', {
             count: summary.total_calls,
           })}
-          accent="#8b5cf6"
+          accent="var(--chart-4)"
         />
         <MetricCard
           icon={<ArrowDownToLine className="h-4 w-4" />}
           label={t('monitoring.tokens.inputTokens')}
           value={formatNumber(summary.total_input_tokens)}
-          accent="#3b82f6"
+          accent="var(--chart-1)"
         />
         <MetricCard
           icon={<ArrowUpFromLine className="h-4 w-4" />}
           label={t('monitoring.tokens.outputTokens')}
           value={formatNumber(summary.total_output_tokens)}
-          accent="#10b981"
+          accent="var(--chart-2)"
         />
         <MetricCard
           icon={<TrendingUp className="h-4 w-4" />}
           label={t('monitoring.tokens.avgPerCall')}
           value={formatNumber(summary.avg_tokens_per_call)}
-          accent="#f59e0b"
+          accent="var(--chart-3)"
         />
         <MetricCard
           icon={<Gauge className="h-4 w-4" />}
           label={t('monitoring.tokens.throughput')}
           value={`${summary.avg_tokens_per_second}`}
           hint={t('monitoring.tokens.tokensPerSec')}
-          accent="#06b6d4"
+          accent="var(--chart-2)"
         />
         <MetricCard
           icon={<AlertTriangle className="h-4 w-4" />}
           label={t('monitoring.tokens.errorCalls')}
           value={`${summary.error_calls}`}
           hint={t('monitoring.tokens.ofTotal', { count: summary.total_calls })}
-          accent="#ef4444"
+          accent="var(--chart-5)"
         />
       </div>
 
@@ -283,8 +283,16 @@ export default function TokenMonitoring({
             >
               <defs>
                 <linearGradient id="tokTotal" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.35} />
-                  <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0.03} />
+                  <stop
+                    offset="5%"
+                    stopColor="var(--chart-4)"
+                    stopOpacity={0.35}
+                  />
+                  <stop
+                    offset="95%"
+                    stopColor="var(--chart-4)"
+                    stopOpacity={0.03}
+                  />
                 </linearGradient>
               </defs>
               <CartesianGrid
@@ -328,7 +336,7 @@ export default function TokenMonitoring({
                 dataKey="input"
                 name={t('monitoring.tokens.inputTokens')}
                 stackId="io"
-                fill="#3b82f6"
+                fill="var(--chart-1)"
                 radius={[0, 0, 0, 0]}
                 barSize={18}
               />
@@ -336,7 +344,7 @@ export default function TokenMonitoring({
                 dataKey="output"
                 name={t('monitoring.tokens.outputTokens')}
                 stackId="io"
-                fill="#10b981"
+                fill="var(--chart-2)"
                 radius={[4, 4, 0, 0]}
                 barSize={18}
               />
@@ -344,7 +352,7 @@ export default function TokenMonitoring({
                 type="monotone"
                 dataKey="total"
                 name={t('monitoring.tokens.totalTokens')}
-                stroke="#8b5cf6"
+                stroke="var(--chart-4)"
                 strokeWidth={2.5}
                 fill="url(#tokTotal)"
                 dot={false}

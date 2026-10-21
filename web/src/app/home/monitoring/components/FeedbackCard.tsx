@@ -31,9 +31,9 @@ const variantAccents: Record<
   string
 > = {
   default: '#64748b',
-  success: '#10b981',
-  warning: '#f59e0b',
-  danger: '#ef4444',
+  success: 'var(--chart-2)',
+  warning: 'var(--chart-3)',
+  danger: 'var(--chart-5)',
 };
 
 export function FeedbackCard({

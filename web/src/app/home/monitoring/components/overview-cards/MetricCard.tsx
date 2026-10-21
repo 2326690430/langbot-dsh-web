@@ -58,7 +58,9 @@ export function MetricCard({
             <span
               className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
               style={{
-                backgroundColor: accent ? `${accent}1a` : 'var(--muted)',
+                backgroundColor: accent
+                  ? `color-mix(in srgb, ${accent} 10%, transparent)`
+                  : 'var(--muted)',
                 color: accent || 'var(--muted-foreground)',
               }}
             >
