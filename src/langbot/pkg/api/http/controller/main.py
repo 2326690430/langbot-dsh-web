@@ -76,7 +76,16 @@ class HTTPController:
         self.ap = ap
         self.quart_app = quart.Quart(__name__)
         self.quart_app.request_class = BoundedJSONRequest
-        quart_cors.cors(self.quart_app, allow_origin='*')
+        # CORS: default to "*" for local/dev (the same-origin Vite proxy). Override via
+        # LANGBOT_CORS_ORIGINS (comma-separated) to restrict to the real frontend origin(s)
+        # when exposing the API beyond 127.0.0.1 (e.g. 0.0.0.0:5300 to a LAN/VPS).
+        cors_origins = os.environ.get("LANGBOT_CORS_ORIGINS", "*").strip()
+        allow_origin: str | list[str] = (
+            [o.strip() for o in cors_origins.split(",") if o.strip()]
+            if cors_origins != "*"
+            else "*"
+        )
+        quart_cors.cors(self.quart_app, allow_origin=allow_origin)
 
         # Set maximum content length to prevent large file uploads
         self.quart_app.config['MAX_CONTENT_LENGTH'] = group.MAX_FILE_SIZE
