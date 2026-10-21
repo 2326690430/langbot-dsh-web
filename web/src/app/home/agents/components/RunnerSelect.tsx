@@ -396,10 +396,7 @@ export default function RunnerSelect({
           if (open && catalogError && !catalogLoading) void loadCatalog();
         }}
       >
-        <SelectTrigger
-          aria-label={label}
-          className="w-full bg-card"
-        >
+        <SelectTrigger aria-label={label} className="w-full bg-card">
           {selectedOption ? (
             <InstalledRunnerContent
               option={selectedOption}

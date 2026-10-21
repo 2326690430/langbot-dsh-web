@@ -176,10 +176,7 @@ export default function PluginCardComponent({
               >
                 <DropdownMenuTrigger asChild>
                   <div className="relative">
-                    <Button
-                      variant="ghost"
-                      className="bg-card hover:bg-muted"
-                    >
+                    <Button variant="ghost" className="bg-card hover:bg-muted">
                       <Ellipsis className="w-4 h-4" />
                     </Button>
                     {cardVO.hasUpdate && (
