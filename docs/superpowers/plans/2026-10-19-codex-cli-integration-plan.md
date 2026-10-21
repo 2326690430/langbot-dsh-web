@@ -121,7 +121,7 @@
 - [ ] **步骤2: 创建基础MCP交互示例**
   - 文件: 创建: `examples/codex-langbot-integration/list-bots.js`
   - 文件: 创建: `examples/codex-langbot-integration/create-pipeline.py`
-  - 文件: 创建: `examples/codex-langbot-integration/install-plugin.sh`
+  - 文件: 创建: `examples/codex-langbot-integration/install-plugin.sh`（已移除：LangBot MCP 服务器不暴露插件安装工具，该示例指向不存在的端点）
 
 - [ ] **步骤3: 添加认证指导**
   - 解释如何将LangBot API密钥与Codex一起使用
