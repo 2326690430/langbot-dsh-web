@@ -177,7 +177,7 @@ function WorkspaceMonitor() {
             <button
               type="button"
               {...dock.handle}
-              className="flex h-12 w-full touch-none select-none flex-col items-center justify-center gap-0.5 bg-[#2288ee] text-white hover:bg-[#2277e0] focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring active:cursor-grabbing"
+              className="flex h-12 w-full touch-none select-none flex-col items-center justify-center gap-0.5 bg-primary text-primary-foreground hover:opacity-90 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring active:cursor-grabbing"
               title={`${t('inflight.expand')} · ${t('inflight.move')}`}
               aria-label={`${t('inflight.title')}: ${total}. ${t('inflight.expand')}. ${t('inflight.move')}`}
               aria-expanded={false}

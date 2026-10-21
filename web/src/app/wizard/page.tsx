@@ -2097,9 +2097,9 @@ function StepAIEngine({
                 key={item.id}
                 value={item.id}
                 aria-label={item.title}
-                className="h-auto min-h-28 w-full items-start justify-start gap-3 rounded-lg border px-4 py-4 text-left whitespace-normal shadow-none hover:bg-muted/40 data-[state=on]:border-[#2288ee]/50 data-[state=on]:bg-blue-50/60 data-[state=on]:text-foreground data-[state=on]:shadow-none dark:data-[state=on]:border-blue-500/50 dark:data-[state=on]:bg-blue-500/10"
+                className="h-auto min-h-28 w-full items-start justify-start gap-3 rounded-lg border px-4 py-4 text-left whitespace-normal shadow-none hover:bg-muted/40 data-[state=on]:border-ring/50 data-[state=on]:bg-ring/10 data-[state=on]:text-foreground data-[state=on]:shadow-none dark:data-[state=on]:border-ring/50 dark:data-[state=on]:bg-ring/10"
               >
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-background text-[#2288ee] shadow-xs">
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-background text-ring shadow-xs">
                   <Icon className="size-4" />
                 </span>
                 <span className="min-w-0 space-y-1.5">
@@ -2204,7 +2204,7 @@ function StepAIEngine({
                   'flex flex-col gap-3 py-4 shadow-none',
                   !selected && 'min-h-52',
                   isSelected &&
-                    'border-[#2288ee]/50 bg-blue-50/60 dark:border-blue-500/50 dark:bg-blue-500/10',
+                    'border-ring/50 bg-ring/10 dark:border-ring/50 dark:bg-ring/10',
                 )}
               >
                 <CardHeader className="flex flex-row items-start gap-3 px-4">
@@ -2313,7 +2313,7 @@ function StepAIEngine({
                 'flex flex-col gap-3 py-4 shadow-none',
                 !selected && 'min-h-52',
                 isSelected &&
-                  'border-[#2288ee]/50 bg-blue-50/60 dark:border-blue-500/50 dark:bg-blue-500/10',
+                  'border-ring/50 bg-ring/10 dark:border-ring/50 dark:bg-ring/10',
               )}
             >
               <CardHeader className="flex flex-row items-start gap-3 px-4">

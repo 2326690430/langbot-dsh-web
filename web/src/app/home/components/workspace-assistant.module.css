@@ -83,8 +83,8 @@
   width: 26px;
   height: 26px;
   border-radius: 10px;
-  color: #2288ee;
-  background: color-mix(in srgb, #2288ee 8%, var(--background));
+  color: var(--ring);
+  background: color-mix(in srgb, var(--ring) 8%, var(--background));
 }
 .welcome {
   padding: 6px 0;
@@ -110,14 +110,14 @@
 .promptIcon {
   display: flex;
   flex-shrink: 0;
-  color: #2288ee;
+  color: var(--ring);
 }
 .prompt:hover:not(:disabled) {
   transform: translateY(-1px);
   border-color: var(--border);
 }
 .prompt:focus-visible {
-  outline: 2px solid #2288ee;
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 .prompt:disabled {
@@ -125,7 +125,7 @@
   cursor: default;
 }
 .userMessage {
-  background: color-mix(in srgb, #2288ee 8%, var(--background));
+  background: color-mix(in srgb, var(--ring) 8%, var(--background));
   border-bottom-right-radius: 0;
 }
 .assistantMessage {
@@ -195,12 +195,12 @@
 }
 .send,
 .dock {
-  background: #2288ee;
+  background: var(--primary);
   box-shadow: none;
 }
 .send:hover:not(:disabled),
 .dock:hover {
-  background: #1878d8;
+  opacity: 0.9;
 }
 @keyframes assistant-arrive {
   from {

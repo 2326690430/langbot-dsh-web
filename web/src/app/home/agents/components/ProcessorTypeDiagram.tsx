@@ -2,7 +2,7 @@ import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { AgentKind } from '@/app/infra/entities/api';
 
-const LANGBOT_BLUE = '#2288ee';
+const LANGBOT_BLUE = 'var(--ring)';
 const LANGBOT_CYAN = '#19b8c9';
 
 function DiagramMotionStyles() {
@@ -380,15 +380,15 @@ function RunnerDiagram() {
       <span className="text-[#8b5cf6]">@handler</span>
     </>,
     <>
-      <span className="text-[#2288ee]">async def</span>{' '}
+      <span className="text-ring">async def</span>{' '}
       <span className="text-[#19b8c9]">on_event</span>(event):
     </>,
     <>
-      <span className="text-[#2288ee]">if</span> event.type =={' '}
+      <span className="text-ring">if</span> event.type =={' '}
       <span className="text-amber-500">&quot;message&quot;</span>:
     </>,
     <>
-      <span className="text-[#2288ee]">await</span> event.process()
+      <span className="text-ring">await</span> event.process()
     </>,
     <>
       <span className="text-muted-foreground"># output → trace</span>
@@ -419,7 +419,7 @@ function RunnerDiagram() {
         className="relative hidden min-w-0 items-center border-l bg-background/45 p-8 lg:flex"
         aria-hidden="true"
       >
-        <div className="absolute left-0 top-1/2 w-8 -translate-y-1/2 border-t border-dashed border-[#2288ee]/25" />
+        <div className="absolute left-0 top-1/2 w-8 -translate-y-1/2 border-t border-dashed border-ring/25" />
 
         <div className="relative w-full rounded-xl border bg-card">
           <div className="flex h-11 items-center gap-2 border-b px-4">

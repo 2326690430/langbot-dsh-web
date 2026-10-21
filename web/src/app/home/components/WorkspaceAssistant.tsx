@@ -630,7 +630,7 @@ function AssistantPanel({
         {!open && (
           <Button
             ref={expandButton}
-            className={`pointer-events-auto touch-none select-none active:cursor-grabbing h-[calc(21px+env(safe-area-inset-bottom))] min-h-0 w-24 gap-2 rounded-b-none rounded-t-md border-0 bg-[#2288ee] px-3 py-0 pb-[env(safe-area-inset-bottom)] text-white shadow-lg hover:bg-[#2277e0] ${styles.dock}`}
+            className={`pointer-events-auto touch-none select-none active:cursor-grabbing h-[calc(21px+env(safe-area-inset-bottom))] min-h-0 w-24 gap-2 rounded-b-none rounded-t-md border-0 bg-primary px-3 py-0 pb-[env(safe-area-inset-bottom)] text-primary-foreground shadow-lg hover:opacity-90 ${styles.dock}`}
             title={t('assistant.expand')}
             aria-label={t('assistant.expand')}
             aria-expanded={false}
